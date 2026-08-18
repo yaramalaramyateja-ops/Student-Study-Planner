@@ -154,3 +154,33 @@ button {
         grid-template-columns: 1fr;
     }
 }
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat-box {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.stat-box span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.stat-box p {
+    color: #666;
+}
+
+@media (max-width: 700px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

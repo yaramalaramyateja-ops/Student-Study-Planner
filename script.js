@@ -28,6 +28,7 @@ function addSession() {
     createFilterButtons();
     displaySessions();
     updateProgress();
+    updateStatistics();
 
     document.getElementById("subject").value = "";
     document.getElementById("topic").value = "";
@@ -98,6 +99,7 @@ function toggleCompleted(id) {
     saveSessions();
     displaySessions();
     updateProgress();
+    updateStatistics();
 }
 
 function deleteSession(id) {
@@ -108,6 +110,7 @@ function deleteSession(id) {
     createFilterButtons();
     displaySessions();
     updateProgress();
+    updateStatistics();
 
     // If the selected subject no longer exists,
     // return to showing all sessions.
@@ -180,3 +183,23 @@ function updateProgress() {
 createFilterButtons();
 displaySessions();
 updateProgress();
+updateStatistics();
+function updateStatistics() {
+    const total = sessions.length;
+
+    const completed = sessions.filter(
+        session => session.completed
+    ).length;
+
+    const pending = total - completed;
+
+    const totalMinutes = sessions.reduce(
+        (sum, session) => sum + Number(session.duration),
+        0
+    );
+
+    document.getElementById("totalSessions").textContent = total;
+    document.getElementById("completedSessions").textContent = completed;
+    document.getElementById("pendingSessions").textContent = pending;
+    document.getElementById("totalMinutes").textContent = totalMinutes;
+}
