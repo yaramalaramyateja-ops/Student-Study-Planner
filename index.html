@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📚 Student Study Planner</h1>
+            <p>Plan your studies, track your progress.</p>
+        </header>
+
+        <section class="card">
+            <h2>Add Study Session</h2>
+
+            <div class="form-grid">
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject e.g. Java"
+                >
+
+                <input
+                    type="text"
+                    id="topic"
+                    placeholder="Topic e.g. Arrays"
+                >
+
+                <input
+                    type="date"
+                    id="date"
+                >
+
+                <input
+                    type="number"
+                    id="duration"
+                    placeholder="Duration (minutes)"
+                    min="1"
+                >
+
+            </div>
+
+            <button onclick="addSession()">Add Study Session</button>
+        </section>
+
+        <section class="card">
+            <h2>📊 Study Progress</h2>
+
+            <div class="progress-info">
+                <span id="progressText">0 / 0 completed</span>
+                <span id="progressPercent">0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>📅 My Study Sessions</h2>
+
+           <div class="filters" id="filterButtons"></div>
+
+            <div id="sessionList"></div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
