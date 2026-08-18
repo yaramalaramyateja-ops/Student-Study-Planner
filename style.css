@@ -184,3 +184,58 @@ button {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+body.dark-mode {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode header p {
+    color: #d1d5db;
+}
+
+body.dark-mode .card {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+body.dark-mode input {
+    background: #374151;
+    color: #ffffff;
+    border-color: #6b7280;
+}
+
+body.dark-mode input::placeholder {
+    color: #d1d5db;
+}
+
+body.dark-mode .stat-box {
+    background: #374151;
+    border-color: #6b7280;
+}
+
+body.dark-mode .stat-box p {
+    color: #d1d5db;
+}
+
+body.dark-mode .session {
+    border-color: #6b7280;
+}
+
+body.dark-mode .session p {
+    color: #d1d5db;
+}
+
+body.dark-mode .completed {
+    background: #173525;
+}
+
+#themeToggle {
+    background: #374151;
+    color: white;
+    margin-top: 10px;
+}
+
+body.dark-mode #themeToggle {
+    background: #f59e0b;
+    color: #111827;
+}
